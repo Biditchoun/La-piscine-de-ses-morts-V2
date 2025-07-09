@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 18:14:50 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/07/08 20:20:04 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/07/09 13:23:19 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ void	putnbr(int nb)
 
 void	ft_putnbr(int nb)
 {
-	int	i;
-
 	if (nb == INT_MIN)
 		write (1, "-2147483648", 11);
 	else

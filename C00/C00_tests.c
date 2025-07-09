@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 12:53:56 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/07/09 12:53:38 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/07/09 13:22:58 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,6 +114,8 @@ int	main()
 	printf(" %i\n", m);
 	ft_putnbr(n);
 	printf(" %i\n", n);
+	ft_putnbr(o);
+	printf(" %i\n", o);
 	ft_putnbr(p);
 	printf(" %i\n", p);
 	ft_putnbr(q);
