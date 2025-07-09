@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 17:42:23 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/07/08 20:22:54 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/07/09 17:18:00 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ void	ft_print_comb2(void)
 			ii = i - 1;
 			while (++ii <= '9')
 			{
-				jj = j - 1;
+				jj = '0' - 1;
 				if (i == ii)
-					jj++;
+					jj = j;
 				while (++jj <= '9')
 					write_nb(i, j, ii, jj);
 			}
