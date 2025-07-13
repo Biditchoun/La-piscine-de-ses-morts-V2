@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 19:38:28 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/07/13 18:18:30 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/07/13 20:37:10 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -298,5 +298,29 @@ int	main()
 //	ft_strlcpy(NULL, NULL, 5);
 
 	//ex11
-	
+	void ft_putstr_non_printable(char *str);
+	printf("\n\nft_putstr_non_printable tests\n");
+	strcpy(s1, "Jambonfromage c'est bon on a compris");
+	printf("Jambonfromage c'est bon on a compris\n");
+	ft_putstr_non_printable(s1);
+	s1[3] = '\n';
+	s1[8] = 31;
+	s1[11] = 127;
+	s1[15] = 126;
+	s1[17] = 147;
+	printf("\nJam\\0aonfr\\1fma\\7fe c~e\\mot bon on a compris\n");
+	ft_putstr_non_printable(s1);
+	s1[25] = -8;
+	printf("\nJam\\0aonfr\\1fma\\7fe c~e\\mot bon o\\f8 a compris\n");
+	ft_putstr_non_printable(s1);
+	//null test
+//	ft_putstr_non_printable(NULL);
+
+	//ex12
+	void *ft_print_memory(void *addr, unsigned int size);
+	printf("\n\n\nft_print_memory tests\nNothing should display here :\n");
+	strcpy(s1, "Jambonfromage on dort depuis 12h");
+	ft_print_memory((void *)s1, 0);
+	printf("Now the adress is the string below, have fun reading\n%s\n", s1);
+	ft_print_memory((void *)s1, 800);
 }
