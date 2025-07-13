@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 19:38:28 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/07/12 21:59:02 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/07/13 18:18:30 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	main()
 	i = strlen(s1);
 	cp = ft_strcpy(s1, s2);
 	cp2 = ft_strcpy(s11, s3);
-	if (cp != s11 || cp2 != s11)
+	if (cp != s1 || cp2 != s11)
 		printf("Bad return value\n");
 	strcpy(s1, "Jambonfromagequiroule VRAIMENT TOUJOURS");
 	strcpy(s11, "Jambonfromagequiroule VRAIMENT TOUJOURS");
@@ -241,5 +241,62 @@ int	main()
 	rt2 = ft_strlcpy(s11, "oui", 0);
 	printf("%u | %s\n", rt1, s1);
 	printf("%u | %s\n", rt2, s11);
+	rt1 = strlcpy(s1, "oui", 1);
+	rt2 = ft_strlcpy(s11, "oui", 1);
+	printf("%u | %c%s\n", rt1, s1[0], &s1[1]);
+	printf("%u | %c%s\n", rt2, s11[0], &s11[1]);
+	rt1 = strlcpy(s1, "oui", 3);
+	rt2 = ft_strlcpy(s11, "oui", 3);
+	printf("%u | %s%c%s\n", rt1, s1, s1[2], &s1[3]);
+	printf("%u | %s%c%s\n", rt2, s11, s11[2], &s11[3]);
+	rt1 = strlcpy(s1, "oui", 4);
+	rt2 = ft_strlcpy(s11, "oui", 4);
+	printf("%u | %s%c%s\n", rt1, s1, s1[3], &s1[4]);
+	printf("%u | %s%c%s\n", rt2, s11, s11[3], &s11[4]);
+	rt1 = strlcpy(s1, "oui", 5);
+	rt2 = ft_strlcpy(s11, "oui", 5);
+	printf("%u | %s%c%c%s\n", rt1, s1, s1[3], s1[4], &s1[5]);
+	printf("%u | %s%c%c%s\n", rt2, s11, s11[3], s11[4], &s11[5]);
+	strcpy(s1, "Jambonfromagequiroule VRAIMENT TOUJOURS");
+	strcpy(s11, "Jambonfromagequiroule VRAIMENT TOUJOURS");
+	rt1 = strlcpy(s1, "", 0);
+	rt2 = ft_strlcpy(s11, "", 0);
+	printf("%u | %c%s\n", rt1, s1[0], &s1[1]);
+	printf("%u | %c%s\n", rt2, s11[0], &s11[1]);
+	s1[0] = s11[0] = 'J';
+	rt1 = strlcpy(s1, "", 1);
+	rt2 = ft_strlcpy(s11, "", 1);
+	printf("%u | %c%s\n", rt1, s1[0], &s1[1]);
+	printf("%u | %c%s\n", rt2, s11[0], &s11[1]);
+	s1[0] = s11[0] = 'J';
+	rt1 = strlcpy(s1, "", 3);
+	rt2 = ft_strlcpy(s11, "", 3);
+	printf("%u | %c%s\n", rt1, s1[0], &s1[1]);
+	printf("%u | %c%s\n", rt2, s11[0], &s11[1]);
+	s1[0] = s11[0] = 'J';
+	//Crah tester
+/*	rt1 = strlcpy(s1, &s1[1], 3);
+	rt2 = ft_strlcpy(s11, &s11[1], 3);
+	printf("%u | %s%c%s\n", rt1, s1, s1[2], &s1[3]);
+	printf("%u | %s%c%s\n", rt2, s11, s11[2], &s11[3]);
+	s1[2] = s11[2] = 'm';
+	rt1 = strlcpy(&s1[5], s1, 8);
+	rt2 = ft_strlcpy(&s11[5], s1, 8);
+	printf("%u | %s\n", rt1, s1);
+	printf("%u | %s\n", rt2, s11);
+	rt1 = strlcpy(s1, s1, 8);
+	rt2 = ft_strlcpy(s11, s11, 8);
+	printf("%u | %s\n", rt1, s1);
+	printf("%u | %s\n", rt2, s11);
+	rt1 = strlcpy(s1, s3, -5);
+	rt2 = ft_strlcpy(s11, s3, -5);
+	printf("%u | %s\n", rt1, s1);
+	printf("%u | %s\n", rt2, s11);
+*/	//ft_strlcpy should crash on every line below
+//	ft_strlcpy(NULL, s1, 5);
+//	ft_strlcpy(s1, NULL, 5);
+//	ft_strlcpy(NULL, NULL, 5);
 
+	//ex11
+	
 }
