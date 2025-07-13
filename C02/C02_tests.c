@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 19:38:28 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/07/13 20:37:10 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/07/13 20:57:58 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -319,7 +319,8 @@ int	main()
 	//ex12
 	void *ft_print_memory(void *addr, unsigned int size);
 	printf("\n\n\nft_print_memory tests\nNothing should display here :\n");
-	strcpy(s1, "Jambonfromage on dort depuis 12h");
+	strcpy(s1, "Jambo\\f8fromage on dort depuis 12h");
+	s1[5] = -8;
 	ft_print_memory((void *)s1, 0);
 	printf("Now the adress is the string below, have fun reading\n%s\n", s1);
 	ft_print_memory((void *)s1, 800);
