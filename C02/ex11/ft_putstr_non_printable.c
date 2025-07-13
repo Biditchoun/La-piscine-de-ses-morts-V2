@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 18:36:27 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/07/13 19:36:26 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/07/13 20:43:40 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_putstr_non_printable(char *str)
 {
-	int		i;
-	char	*base;
 	unsigned char	c;
+	char			*base;
+	int				i;
 
 	if (!str)
 		return ;

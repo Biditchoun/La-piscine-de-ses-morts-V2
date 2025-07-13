@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 19:41:59 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/07/13 20:36:46 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/07/13 20:44:57 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	print_address(char *base, long addr, int i)
 {
 	if (i < 15)
-		print_address(base, addr/16, i + 1);
+		print_address(base, addr / 16, i + 1);
 	write(1, &base[addr % 16], 1);
 }
 
@@ -55,15 +55,15 @@ int	print_chars(char *addr, unsigned int lim)
 			write(1, ".", 1);
 		if (! (++i % 16))
 			return (16);
-	}	
+	}
 	return (i % 16);
 }
 
 void	*ft_print_memory(void *addr, unsigned int size)
 {
 	unsigned int	i;
-	char	*base;
-	char	*str;
+	char			*base;
+	char			*str;
 
 	if (!addr || !size)
 		return (addr);
