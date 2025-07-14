@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 13:09:55 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/07/14 19:39:18 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/07/14 21:27:10 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -138,6 +138,7 @@ int main()
 	printf("%s\n%s\n", strstr(s4, "Jam"), ft_strstr(s4, "Jam"));
 	printf("%s\n%s\n", strstr(s4, "?)"), ft_strstr(s4, "?)"));
 	printf("%s\n%s\n", strstr(s4, " ?)"), ft_strstr(s4, " ?)"));
+	printf("%s\n%s\n", strstr(s4, ""), ft_strstr(s4, ""));
 	s4[6] = 0;
 	printf("%s\n%s\n", strstr(s4, "r"), ft_strstr(s4, "r"));
 	//Sorry I'm still not in the mood to test out specific bad cases handling and crashes
