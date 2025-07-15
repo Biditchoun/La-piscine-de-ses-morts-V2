@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 13:09:55 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/07/15 13:15:46 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/07/15 16:25:30 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -152,6 +152,9 @@ int main()
 	s4[6] = 0;
 	printf("%s\n%s\n", strstr(s4, "r"), ft_strstr(s4, "r"));
 	s4[6] = 'f';
+	strcpy(s2, "aaaaab");
+	printf("%s\n%s\n", strstr(s2, "aaaab"), ft_strstr(s4, "aaaab"));
+
 	//Sorry I'm still not in the mood to test out specific bad cases handling and crashes
 
 	//ex05
