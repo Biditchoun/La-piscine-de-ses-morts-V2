@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 18:00:26 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/07/15 13:28:28 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/07/15 13:32:33 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,6 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	if (str_len(dest) >= size)
 		return (str_len(src) + size);
 	rt = str_len(dest) + str_len(src);
-//#include <stdio.h>
-//	printf("~rt : %i~dest : %s~src : %s~%u\n", rt, dest, src, size);
 	i = str_len(dest);
 	j = -1;
 	while (src[++j] && i < size - 1)
