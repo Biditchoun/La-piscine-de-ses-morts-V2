@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 13:09:55 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/07/14 21:27:10 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/07/15 13:15:46 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,6 +121,16 @@ int main()
 	strncat(s4, " si ?)", 99);
 	ft_strncat(s44, " si ?)", 99);
 	printf("%s\n%s\n", s4, s44);
+	strncat(s3, s4, 3);
+	ft_strncat(s33, s44, 3);
+	printf("%s\n%s\n", s3, s33);
+	strncat(s3, s4, 4);
+	ft_strncat(s33, s44, 4);
+	printf("%s\n%s\n", s3, s33);
+	strncat(s3, s4, 18);
+	ft_strncat(s33, s44, 18);
+	printf("%s\n%s\n", s3, s33);
+
 	//Sorry I'm not in the mood to test out specific bad cases handling and crashes
 	
 	//ex04
@@ -141,6 +151,7 @@ int main()
 	printf("%s\n%s\n", strstr(s4, ""), ft_strstr(s4, ""));
 	s4[6] = 0;
 	printf("%s\n%s\n", strstr(s4, "r"), ft_strstr(s4, "r"));
+	s4[6] = 'f';
 	//Sorry I'm still not in the mood to test out specific bad cases handling and crashes
 
 	//ex05
@@ -169,11 +180,22 @@ int main()
 	rt1 = strlcat(s1, "", 2);
 	rt2 = ft_strlcat(s11, "", 2);
 	printf("%i | %s\n%i | %s\n", rt1, s1, rt2, s11);
-	rt1 = strlcat(s4, "( ou non.)", 4);
-	rt2 = ft_strlcat(s44, "(ou non.)", 4);
+	rt1 = strlcat(s4, " ( ou non.)", strlen(s4) + 4);
+	rt2 = ft_strlcat(s44, " ( ou non.)", strlen(s44) + 4);
 	printf("%i | %s\n%i | %s\n", rt1, s4, rt2, s44);
-	rt1 = strlcat(s4, " non.)", 4);
-	rt2 = ft_strlcat(s44, " non.)", 4);
+	rt1 = strlcat(s4, "non.)", strlen(s4) + 6);
+	rt2 = ft_strlcat(s44, "non.)", strlen(s44) + 6);
 	printf("%i | %s\n%i | %s\n", rt1, s4, rt2, s44);
+	strcpy(s3, "PAF");
+	strcpy(s33, "PAF");
+	rt1 = strlcat(s3, s4, 3);
+	rt2 = ft_strlcat(s33, s44, 3);
+	printf("%i | %s\n%i | %s\n", rt1, s3, rt2, s33);
+	rt1 = strlcat(s3, s4, 4);
+	rt2 = ft_strlcat(s33, s44, 4);
+	printf("%i | %s\n%i | %s\n", rt1, s3, rt2, s33);
+	rt1 = strlcat(s3, s4, 18);
+	rt2 = ft_strlcat(s33, s44, 18);
+	printf("%i | %s\n%i | %s\n", rt1, s3, rt2, s33);
 	//This was a copy/paste of the strncat tests
 }
