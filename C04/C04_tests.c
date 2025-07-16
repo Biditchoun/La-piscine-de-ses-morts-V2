@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 20:19:06 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/07/15 15:48:16 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/07/16 16:30:57 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,7 +123,82 @@ int main()
 	char s13[100] = "+\n++-002222222/5";
 	char s14[100] = "+++-\r002222222/5";
 	char s15[100] = "+++-\v002222222/5";
-	char s16[100] = "+++- 00\f2222222/5";
-	char s17[100] = "+++- 0022\t22222/5";
-	printf("Expexted output :\n0 45 457 -20 38 2000 -69 -86 -444 -123 -2222222 1010101 0 0 0 0 0\nGotten output :\n%i %i %i %i %i %i %i %i %i %i %i %i %i %i %i %i %i\n", ft_atoi(s1), ft_atoi(s2), ft_atoi(s3), ft_atoi(s4), ft_atoi(s5), ft_atoi(s6), ft_atoi(s7), ft_atoi(s8), ft_atoi(s9), ft_atoi(s10), ft_atoi(s11), ft_atoi(s12), ft_atoi(s13), ft_atoi(s14), ft_atoi(s15), ft_atoi(s16), ft_atoi(s17));
+	char s16[100] = "+++-00\f2222222/5";
+	char s17[100] = "+++-0022\t22222/5";
+	printf("Expected output :\n0 45 457 -20 38 2000 -69 -86 -444 -123 -2222222 1010101 0 0 0 0 -22 -2147483648\nGotten output :\n%i %i %i %i %i %i %i %i %i %i %i %i %i %i %i %i %i %i\n", ft_atoi(s1), ft_atoi(s2), ft_atoi(s3), ft_atoi(s4), ft_atoi(s5), ft_atoi(s6), ft_atoi(s7), ft_atoi(s8), ft_atoi(s9), ft_atoi(s10), ft_atoi(s11), ft_atoi(s12), ft_atoi(s13), ft_atoi(s14), ft_atoi(s15), ft_atoi(s16), ft_atoi(s17), ft_atoi("    \v\f\r---2147483648"));
+	//ft_atoi should not crash
+//	ft_atoi(NULL);
+	
+	//ex04
+	void ft_putnbr_base(int nbr, char *base);	
+	printf("\n\nft_putnbr_base tests\n");
+	printf("Expected output :\n\nGotten output :\n");
+	ft_putnbr_base(8, "");
+	ft_putnbr_base(8, "a");
+	ft_putnbr_base(8, "  ");
+	ft_putnbr_base(8, "0123456789-");
+	ft_putnbr_base(8, "+0123456789");
+	ft_putnbr_base(8, "aabcdefgh");
+	ft_putnbr_base(8, "abcddefghh");
+	ft_putnbr_base(8, "abcdeffgh");
+	ft_putnbr_base(8, "abcdefa");
+	ft_putnbr_base(8, "abcdaefg");
+	ft_putnbr_base(8, "abcdefga");
+	ft_putnbr_base(8, "bcdeafga");
+	printf("\n-7852516351\n");
+	ft_putnbr_base(INT_MIN, "9876543210");
+	printf("\n-7852516352\n");
+	ft_putnbr_base(INT_MIN+1, "9876543210");
+	printf("\n-89999\n");
+	ft_putnbr_base(-10000, "9876543210");
+	printf("\n-8998\n");
+	ft_putnbr_base(-1001, "9876543210");
+	printf("\n-000\n");
+	ft_putnbr_base(-999, "9876543210");
+	printf("\n-57\n");
+	ft_putnbr_base(-42, "9876543210");
+	printf("\n-8\n");
+	ft_putnbr_base(-1, "9876543210");
+	printf("\n9\n");
+	ft_putnbr_base(0, "9876543210");
+	printf("\n8\n");
+	ft_putnbr_base(1, "9876543210");
+	printf("\n56\n");
+	ft_putnbr_base(43, "9876543210");
+	printf("\n0000\n");
+	ft_putnbr_base(9999, "9876543210");
+	printf("\n8999999\n");
+	ft_putnbr_base(1000000, "9876543210");
+	printf("\n8999999998\n");
+	ft_putnbr_base(1000000001, "9876543210");
+	printf("\n7852516352\n");
+	ft_putnbr_base(INT_MAX, "9876543210");
+	printf("\n84\n");
+	ft_putnbr_base(15, "9876543210");
+	printf("\n111\n");
+	ft_putnbr_base(888, "9876543210");
+	printf("\n012345\n");
+	ft_putnbr_base(987654, "9876543210");
+	printf("\n333333333\n");
+	ft_putnbr_base(666666666, "9876543210");
+	printf("\nbab\n");
+	ft_putnbr_base(5, "ab");
+	printf("\nca\n");
+	ft_putnbr_base(24, "abcdefghijkl");
+	printf("\n-80000000\n");
+	ft_putnbr_base(INT_MIN, "0123456789abcdef");
+	//ft_putnbr_base should not crash
+//	ft_putnbr_base(42, NULL);
+
+	//ex05
+	int ft_atoi_base(char *str, char *base);	
+	printf("\n\nft_atoi_base tests\n");
+	char *base1 = "0123456789";
+	printf("0 45 457 -20 38 2000 -69 -86 -444 -123 -2222222 1010101 0 0 0 0 -22\n%i %i %i %i %i %i %i %i %i %i %i %i %i %i %i %i %i\n", ft_atoi_base(s1, base1), ft_atoi_base(s2, base1), ft_atoi_base(s3, base1), ft_atoi_base(s4, base1), ft_atoi_base(s5, base1), ft_atoi_base(s6, base1), ft_atoi_base(s7, base1), ft_atoi_base(s8, base1), ft_atoi_base(s9, base1), ft_atoi_base(s10, base1), ft_atoi_base(s11, base1), ft_atoi_base(s12, base1), ft_atoi_base(s13, base1), ft_atoi_base(s14, base1), ft_atoi_base(s15, base1), ft_atoi_base(s16, base1), ft_atoi_base(s17, base1));
+	printf("0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n%i %i %i %i %i %i %i %i %i %i %i %i %i %i %i %i %i %i\n", ft_atoi_base(s2, ""), ft_atoi_base(s2, "a"), ft_atoi_base(s2, "||"), ft_atoi_base(s2, "0123456789-"), ft_atoi_base(s2, "+0123456789"), ft_atoi_base(s2, "aabcdefgh"), ft_atoi_base(s2, "abcdefghh"), ft_atoi_base(s8, "abcdeffgh"), ft_atoi_base(s2, "abcdefa"), ft_atoi_base(s2, "abcdaefg"), ft_atoi_base(s2, "abcdefga"), ft_atoi_base(s2, "bcdeafga"), ft_atoi_base(s2, " abcdef"), ft_atoi_base(s2, "abcdef\n"), ft_atoi_base(s2, "abc\vdef"), ft_atoi_base(s2, "abcde\rf"), ft_atoi_base(s2, "abcd\fef"), ft_atoi_base(s2, "a\tbcdef"));
+	printf("-2147483648 5 24\n%i %i %i\n", ft_atoi_base("-80000000", "0bcdefgh8jklmnop"), ft_atoi_base("bab", "ab"), ft_atoi_base("ca", "abcdefghijkl"));
+	//ft_atoi_base should not crash
+//	ft_atoi(NULL, base1);
+//	ft_atoi(s1, NULL);
+//	ft_atoi(NULL, NULL);
 }
