@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/16 17:01:47 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/07/17 15:33:53 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/07/17 21:07:54 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,5 @@ int main()
 	int ft_ten_queens_puzzle(void);
 	printf("\n\nft_ten_queens_puzzle test\n");
 	int i = ft_ten_queens_puzzle();
-	printf("\nIt should return xxx, it returned %i.\n", i);
+	printf("\nIt should return 724, it returned %i.\nEach individual line from the output should never have two identical numbers, and when you imagine the grid, you should be careful about the diagonals.\n", i);
 }
