@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 16:01:49 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/07/19 23:09:24 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/07/20 22:09:21 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,15 @@ int	**ffree(int **str)
 	return (NULL);
 }
 
-int	handle_error(int **rules, int **grid)
+int	handle_error(int **rules, int **grid, int **opt)
 {
 	write(1, "Error\n", 6);
 	if (rules)
 		ffree(rules);
 	if (grid)
 		ffree(grid);
+	if (opt)
+		ffree(opt);
 	return (0);
 }
 
