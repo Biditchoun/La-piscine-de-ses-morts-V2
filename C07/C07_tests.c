@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 21:34:01 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/07/23 19:53:24 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/07/23 21:07:03 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ int	main()
 	printf("%s\n%s\n", p1, p11);
 	free(p1);
 	free(p11);
+	//ft_strdup should crash
+	//ft_strdup(NULL);
 
 	//ex01
 	int *ft_range(int min, int max);
@@ -55,8 +57,8 @@ int	main()
 	i = i2 = 0;
 	j = 1;
 	p2 = ft_range(i, j);
-	while (++i <= j)
-		printf("%i ", i);
+	while (i < j)
+		printf("%i ", i++);
 	printf("\n");
 	i = -1;
 	while (++i < j - i2)
@@ -66,8 +68,8 @@ int	main()
 	i = i2 = 3;
 	j = 12;
 	p2 = ft_range(i, j);
-	while (++i <= j)
-		printf("%i ", i);
+	while (i < j)
+		printf("%i ", i++);
 	printf("\n");
 	i = -1;
 	while (++i < j - i2)
@@ -77,8 +79,8 @@ int	main()
 	i = i2 = INT_MIN;
 	j = INT_MIN + 6;
 	p2 = ft_range(i, j);
-	while (++i <= j)
-		printf("%i ", i);
+	while (i < j)
+		printf("%i ", i++);
 	printf("\n");
 	i = -1;
 	while (++i < j - i2)
@@ -88,8 +90,8 @@ int	main()
 	i = i2 = -8;
 	j = 1;
 	p2 = ft_range(i, j);
-	while (++i <= j)
-		printf("%i ", i);
+	while (i < j)
+		printf("%i ", i++);
 	printf("\n");
 	i = -1;
 	while (++i < j - i2)
@@ -99,8 +101,8 @@ int	main()
 	i = i2 = 0;
 	j = 0;
 	p2 = ft_range(i, j);
-	while (++i <= j)
-		printf("%i ", i);
+	while (i < j)
+		printf("%i ", i++);
 	printf("\n");
 	i = -1;
 	while (++i < j - i2)
@@ -110,8 +112,8 @@ int	main()
 	i = i2 = 19;
 	j = 18;
 	p2 = ft_range(i, j);
-	while (++i <= j)
-		printf("%i ", i);
+	while (i < j)
+		printf("%i ", i++);
 	printf("\n");
 	i = -1;
 	while (++i < j - i2)
@@ -121,8 +123,8 @@ int	main()
 	i = i2 = -4;
 	j = -5;
 	p2 = ft_range(i, j);
-	while (++i <= j)
-		printf("%i ", i);
+	while (i < j)
+		printf("%i ", i++);
 	printf("\n");
 	i = -1;
 	while (++i < j - i2)
@@ -132,9 +134,8 @@ int	main()
 	i = i2 = INT_MAX - 3;
 	j = INT_MAX;
 	p2 = ft_range(i, j);
-	while (++i < j)
-		printf("%i ", i);
-	printf("%i ", INT_MAX);
+	while (i < j)
+		printf("%i ", i++);
 	printf("\n");
 	i = -1;
 	while (++i < j - i2)
@@ -144,8 +145,8 @@ int	main()
 	i = i2 = 1;
 	j = 0;
 	p2 = ft_range(i, j);
-	while (++i <= j)
-		printf("%i ", i);
+	while (i < j)
+		printf("%i ", i++);
 	printf("\n");
 	i = -1;
 	while (++i < j - i2)
@@ -344,6 +345,14 @@ int	main()
 	}
 	printf("\n%s\n", p1);
 	free(p1);
+	//ft_strjoin should not crash
+	ft_strjoin(-3, ppt, s4);
+	ft_strjoin(-3, NULL, s4);
+	ft_strjoin(-3, ppt, NULL);
+	ft_strjoin(-3, NULL, NULL);
+	ft_strjoin(3, NULL, s4);
+	ft_strjoin(3, ppt, NULL);
+	ft_strjoin(3, NULL, NULL);
 
 	//ex04
 	char *ft_convert_base(char *nbr, char *base_from, char *base_to);
@@ -426,16 +435,16 @@ int	main()
 	p1 = ft_convert_base("-80000000", "0bcdefgh8jklmnop", "0123456789");
 	p3 = ft_convert_base("bab", "ab", "0123456789");
 	p4 = ft_convert_base("ca", "abcdefghijklmn", "0123456");
-	p5 = ft_convert_base("-2147483648", "9876543210", "0123456789");
-	p6 = ft_convert_base("-2147483647", "9876543210", "0123456789");
-	p7 = ft_convert_base("-10000", "9876543210", "0123456789");
-	p8 = ft_convert_base("-1001", "9876543210", "0123456789");
-	p9 = ft_convert_base("-999", "9876543210", "0123456789");
-	p10 = ft_convert_base("-42", "9876543210", "0123456789");
-	p11 = ft_convert_base("-1", "9876543210", "0123456789");
-	p12 = ft_convert_base("0", "9876543210", "0123456789");
-	p13 = ft_convert_base("1", "9876543210", "0123456789");
-	printf("-2147483648 5 40 -7852516351 -7852516352 -89999 -8998 -000 -57 -8 9 8\n%s %s %s %s %s %s %s %s %s %s %s %s\n", p1, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12);
+	p5 = ft_convert_base("-2147483648", "0123456789", "9876543210");
+	p6 = ft_convert_base("-2147483647", "0123456789", "9876543210");
+	p7 = ft_convert_base("-10000", "0123456789", "9876543210");
+	p8 = ft_convert_base("-1001", "0123456789", "9876543210");
+	p9 = ft_convert_base("-999", "0123456789", "9876543210");
+	p10 = ft_convert_base("-42", "0123456789", "9876543210");
+	p11 = ft_convert_base("-1", "0123456789", "9876543210");
+	p12 = ft_convert_base("0", "0123456789", "9876543210");
+	p13 = ft_convert_base("1", "0123456789", "9876543210");
+	printf("-2147483648 5 40 -7852516351 -7852516352 -89999 -8998 -000 -57 -8 9 8\n%s %s %s %s %s %s %s %s %s %s %s %s\n", p1, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13);
 	free(p1);
 	free(p3);
 	free(p4);
@@ -448,19 +457,45 @@ int	main()
 	free(p11);
 	free(p12);
 	free(p13);
-	p1 = ft_convert_base(43, "9876543210", "0123456789");
-	p3 = ft_convert_base(9999, "9876543210", "0123456789");
-	p4 = ft_convert_base(1000000, "9876543210", "0123456789");
-	p5 = ft_convert_base(1000000001, "9876543210", "0123456789");
-	p6 = ft_convert_base(INT_MAX, "9876543210", "0123456789");
-	p7 = ft_convert_base(15, "9876543210", "0123456789");
-	p8 = ft_convert_base(888, "9876543210", "0123456789");
-	p9 = ft_convert_base(987654, "9876543210", "0123456789");
-	p10 = ft_convert_base(666666666, "9876543210", "0123456789");
-	p11 = ft_convert_base(5, "ab", "0123456789");
-	p12 = ft_convert_base(24, "abcdefghijkl", "0123456789");
-	p13 = ft_convert_base(INT_MIN, "0123456789abcdef", "0123456789");
-	printf("56 0000 8999999 8999999998 7852516352 84 111 012345 333333333 bab ca -80000000\n%s %s %s\n", p1, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13);
+	p1 = ft_convert_base(" -+-43", "0123456789", "9876543210");
+	p3 = ft_convert_base("\f+-+-9999", "0123456789", "9876543210");
+	p4 = ft_convert_base("\n+++1000000 1", "0123456789", "9876543210");
+	p5 = ft_convert_base("\r------+--+++---+-1000000001\t3", "0123456789", "9876543210");
+	p6 = ft_convert_base("\t2147483647\f1", "0123456789", "9876543210");
+	p7 = ft_convert_base("\v+15\r0", "0123456789", "9876543210");
+	p8 = ft_convert_base("  \f 888\n7", "0123456789", "9876543210");
+	p9 = ft_convert_base("   \r \v 987654\f6", "0123456789", "9876543210");
+	p10 = ft_convert_base("\f\n\r\t\v 666666666+6", "0123456789", "9876543210");
+	p11 = ft_convert_base("\t\f \v\n\r--5-3", "0123456789", "ab");
+	p12 = ft_convert_base("----24 9", "0123456789", "abcdefghijkl");
+	p13 = ft_convert_base("-----2147483648a", "0123456789", "01234567|9abcdef");
+	printf("56 0000 8999999 8999999998 7852516352 84 111 012345 333333333 bab ca -|0000000\n%s %s %s %s %s %s %s %s %s %s %s %s\n", p1, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13);
+	free(p1);
+	free(p2);
+	free(p3);
+	free(p4);
+	free(p5);
+	free(p6);
+	free(p7);
+	free(p8);
+	free(p9);
+	free(p10);
+	free(p11);
+	free(p12);
+	free(p13);
+	p1 = ft_convert_base("+ 43", "0123456789", "9876543210");
+	p3 = ft_convert_base("-\t9999", "0123456789", "9876543210");
+	p4 = ft_convert_base("+-+\v1000000", "0123456789", "9876543210");
+	p5 = ft_convert_base("+++++\f1000000001", "0123456789", "9876543210");
+	p6 = ft_convert_base("---\n2147483647", "0123456789", "9876543210");
+	p7 = ft_convert_base("--\r15", "0123456789", "9876543210");
+	p8 = ft_convert_base("-+++-\t888", "0123456789", "9876543210");
+	p9 = ft_convert_base("-+-\f+-+-+987654", "0123456789", "9876543210");
+	p10 = ft_convert_base("-+-+-+++++\v+-++666666666", "0123456789", "9876543210");
+	p11 = ft_convert_base("---\n5", "0123456789", "ab");
+	p12 = ft_convert_base("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\r-24", "0123456789", "abcdefghijkl");
+	p13 = ft_convert_base("-- -2147483648", "0123456789", "0123456789abcdef");
+	printf("9 9 9 9 9 9 9 9 9 a a 0\n%s %s %s %s %s %s %s %s %s %s %s %s\n", p1, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13);
 	free(p1);
 	free(p2);
 	free(p3);
@@ -475,5 +510,11 @@ int	main()
 	free(p12);
 	free(p13);
 	//ft_convert_base should not crash
-//	ft_convert_base(42, NULL);
+	ft_convert_base(NULL, "9876543210", "0123456789");
+	ft_convert_base(NULL, NULL, "0123456789");
+	ft_convert_base(NULL, "9876543210", NULL);
+	ft_convert_base(NULL, NULL, NULL);
+	ft_convert_base("0", "9876543210", "0123456789");
+	ft_convert_base("0", NULL, "0123456789");
+	ft_convert_base("0", "9876543210", NULL);
 }
