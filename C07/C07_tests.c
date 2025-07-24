@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 21:34:01 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/07/24 16:54:22 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/07/24 20:03:17 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -529,7 +529,7 @@ int	main()
 	i = -1;
 	while (oui[++i])
 		printf("%s ", oui[i]);
-	printf("%s\n", oui[i]);
+	printf("%s \n", oui[i]);
 	i = -1;
 	while (oui[++i])
 		free(oui[i]);
@@ -541,7 +541,7 @@ int	main()
 	i = -1;
 	while (oui[++i])
 		printf("%s ", oui[i]);
-	printf("%s\n", oui[i]);
+	printf("%s \n", oui[i]);
 	i = -1;
 	while (oui[++i])
 		free(oui[i]);
@@ -553,7 +553,7 @@ int	main()
 	i = -1;
 	while (oui[++i])
 		printf("%s ", oui[i]);
-	printf("%s\n", oui[i]);
+	printf("%s \n", oui[i]);
 	i = -1;
 	while (oui[++i])
 		free(oui[i]);
@@ -565,7 +565,7 @@ int	main()
 	i = -1;
 	while (oui[++i])
 		printf("%s ", oui[i]);
-	printf("%s\n", oui[i]);
+	printf("%s \n", oui[i]);
 	i = -1;
 	while (oui[++i])
 		free(oui[i]);
@@ -577,7 +577,7 @@ int	main()
 	i = -1;
 	while (oui[++i])
 		printf("%s ", oui[i]);
-	printf("%s\n", oui[i]);
+	printf("%s \n", oui[i]);
 	i = -1;
 	while (oui[++i])
 		free(oui[i]);
@@ -589,7 +589,7 @@ int	main()
 	i = -1;
 	while (oui[++i])
 		printf("%s ", oui[i]);
-	printf("%s\n", oui[i]);
+	printf("%s \n", oui[i]);
 	i = -1;
 	while (oui[++i])
 		free(oui[i]);
@@ -601,7 +601,7 @@ int	main()
 	i = -1;
 	while (oui[++i])
 		printf("%s ", oui[i]);
-	printf("%s\n", oui[i]);
+	printf("%s \n", oui[i]);
 	i = -1;
 	while (oui[++i])
 		free(oui[i]);
@@ -613,7 +613,7 @@ int	main()
 	i = -1;
 	while (oui[++i])
 		printf("%s ", oui[i]);
-	printf("%s\n", oui[i]);
+	printf("%s \n", oui[i]);
 	i = -1;
 	while (oui[++i])
 		free(oui[i]);
@@ -625,7 +625,7 @@ int	main()
 	i = -1;
 	while (oui[++i])
 		printf("%s ", oui[i]);
-	printf("%s\n", oui[i]);
+	printf("%s \n", oui[i]);
 	i = -1;
 	while (oui[++i])
 		free(oui[i]);
@@ -633,11 +633,11 @@ int	main()
 	free(oui);
 	s1 = "feur";
 	oui = ft_split(s1, "rff");
-	printf("eu%s \n", s11);
+	printf("eu %s \n", s11);
 	i = -1;
 	while (oui[++i])
 		printf("%s ", oui[i]);
-	printf("%s\n", oui[i]);
+	printf("%s \n", oui[i]);
 	i = -1;
 	while (oui[++i])
 		free(oui[i]);
@@ -649,7 +649,7 @@ int	main()
 	i = -1;
 	while (oui[++i])
 		printf("%s ", oui[i]);
-	printf("%s\n", oui[i]);
+	printf("%s \n", oui[i]);
 	i = -1;
 	while (oui[++i])
 		free(oui[i]);
@@ -661,7 +661,7 @@ int	main()
 	i = -1;
 	while (oui[++i])
 		printf("%s ", oui[i]);
-	printf("%s\n", oui[i]);
+	printf("%s \n", oui[i]);
 	i = -1;
 	while (oui[++i])
 		free(oui[i]);
@@ -673,7 +673,7 @@ int	main()
 	i = -1;
 	while (oui[++i])
 		printf("%s ", oui[i]);
-	printf("%s\n", oui[i]);
+	printf("%s \n", oui[i]);
 	i = -1;
 	while (oui[++i])
 		free(oui[i]);
@@ -685,7 +685,7 @@ int	main()
 	i = -1;
 	while (oui[++i])
 		printf("%s ", oui[i]);
-	printf("%s\n", oui[i]);
+	printf("%s \n", oui[i]);
 	i = -1;
 	while (oui[++i])
 		free(oui[i]);
@@ -697,7 +697,7 @@ int	main()
 	i = -1;
 	while (oui[++i])
 		printf("%s ", oui[i]);
-	printf("%s\n", oui[i]);
+	printf("%s \n", oui[i]);
 	i = -1;
 	while (oui[++i])
 		free(oui[i]);
@@ -709,7 +709,7 @@ int	main()
 	i = -1;
 	while (oui[++i])
 		printf("%s ", oui[i]);
-	printf("%s\n", oui[i]);
+	printf("%s \n", oui[i]);
 	i = -1;
 	while (oui[++i])
 		free(oui[i]);
@@ -721,7 +721,7 @@ int	main()
 	i = -1;
 	while (oui[++i])
 		printf("%s ", oui[i]);
-	printf("%s\n", oui[i]);
+	printf("%s \n", oui[i]);
 	i = -1;
 	while (oui[++i])
 		free(oui[i]);
