@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 19:56:52 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/07/22 21:30:28 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/07/24 16:56:12 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ char	*size_is_0(void)
 {
 	char	*rt;
 
-	rt = NULL;
 	rt = malloc(1);
 	if (!rt)
 		return (NULL);
@@ -72,7 +71,6 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 		if (strs[i])
 			k += str_len(strs[i]);
 	j = str_len(sep);
-	rt = NULL;
 	rt = malloc(k + j * (size - 1) + 1);
 	if (!rt)
 		return (NULL);
