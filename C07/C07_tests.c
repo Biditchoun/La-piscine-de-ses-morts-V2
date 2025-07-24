@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 21:34:01 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/07/23 21:07:03 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/07/24 15:01:40 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -517,4 +517,214 @@ int	main()
 	ft_convert_base("0", "9876543210", "0123456789");
 	ft_convert_base("0", NULL, "0123456789");
 	ft_convert_base("0", "9876543210", NULL);
+
+	//ex05
+	char **ft_split(char *str, char *charset);
+	printf("\n\nft_split tests\n");
+	char **oui;
+	s11 = NULL;
+	s1 = "";
+	oui = ft_split(s1, " ");
+	printf("%s \n", s11);
+	i = -1;
+	while (oui[++i])
+		printf("%s ", oui[i]);
+	printf("%s\n", oui[i]);
+	i = -1;
+	while (oui[++i])
+		free(oui[i]);
+	free(oui[i]);
+	free(oui);
+	s1 = "feur";
+	oui = ft_split(s1, "");
+	printf("feur %s \n", s11);
+	i = -1;
+	while (oui[++i])
+		printf("%s ", oui[i]);
+	printf("%s\n", oui[i]);
+	i = -1;
+	while (oui[++i])
+		free(oui[i]);
+	free(oui[i]);
+	free(oui);
+	s1 = "";
+	oui = ft_split(s1, "");
+	printf("%s \n", s11);
+	i = -1;
+	while (oui[++i])
+		printf("%s ", oui[i]);
+	printf("%s\n", oui[i]);
+	i = -1;
+	while (oui[++i])
+		free(oui[i]);
+	free(oui[i]);
+	free(oui);
+	s1 = "feur";
+	oui = ft_split(s1, " ");
+	printf("feur %s \n", s11);
+	i = -1;
+	while (oui[++i])
+		printf("%s ", oui[i]);
+	printf("%s\n", oui[i]);
+	i = -1;
+	while (oui[++i])
+		free(oui[i]);
+	free(oui[i]);
+	free(oui);
+	s1 = "feur";
+	oui = ft_split(s1, "| ");
+	printf("feur %s \n", s11);
+	i = -1;
+	while (oui[++i])
+		printf("%s ", oui[i]);
+	printf("%s\n", oui[i]);
+	i = -1;
+	while (oui[++i])
+		free(oui[i]);
+	free(oui[i]);
+	free(oui);
+	s1 = "feur";
+	oui = ft_split(s1, "e");
+	printf("f ur %s \n", s11);
+	i = -1;
+	while (oui[++i])
+		printf("%s ", oui[i]);
+	printf("%s\n", oui[i]);
+	i = -1;
+	while (oui[++i])
+		free(oui[i]);
+	free(oui[i]);
+	free(oui);
+	s1 = "feur";
+	oui = ft_split(s1, "f");
+	printf("eur %s \n", s11);
+	i = -1;
+	while (oui[++i])
+		printf("%s ", oui[i]);
+	printf("%s\n", oui[i]);
+	i = -1;
+	while (oui[++i])
+		free(oui[i]);
+	free(oui[i]);
+	free(oui);
+	s1 = "feur";
+	oui = ft_split(s1, "r");
+	printf("feu %s \n", s11);
+	i = -1;
+	while (oui[++i])
+		printf("%s ", oui[i]);
+	printf("%s\n", oui[i]);
+	i = -1;
+	while (oui[++i])
+		free(oui[i]);
+	free(oui[i]);
+	free(oui);
+	s1 = "feur";
+	oui = ft_split(s1, "uee");
+	printf("f r %s \n", s11);
+	i = -1;
+	while (oui[++i])
+		printf("%s ", oui[i]);
+	printf("%s\n", oui[i]);
+	i = -1;
+	while (oui[++i])
+		free(oui[i]);
+	free(oui[i]);
+	free(oui);
+	s1 = "feur";
+	oui = ft_split(s1, "rff");
+	printf("eu%s \n", s11);
+	i = -1;
+	while (oui[++i])
+		printf("%s ", oui[i]);
+	printf("%s\n", oui[i]);
+	i = -1;
+	while (oui[++i])
+		free(oui[i]);
+	free(oui[i]);
+	free(oui);
+	s1 = "feur";
+	oui = ft_split(s1, "fuu");
+	printf("e r %s \n", s11);
+	i = -1;
+	while (oui[++i])
+		printf("%s ", oui[i]);
+	printf("%s\n", oui[i]);
+	i = -1;
+	while (oui[++i])
+		free(oui[i]);
+	free(oui[i]);
+	free(oui);
+	s1 = "feur";
+	oui = ft_split(s1, "rer");
+	printf("f u %s \n", s11);
+	i = -1;
+	while (oui[++i])
+		printf("%s ", oui[i]);
+	printf("%s\n", oui[i]);
+	i = -1;
+	while (oui[++i])
+		free(oui[i]);
+	free(oui[i]);
+	free(oui);
+	s1 = "Jambonfromagequiroulevraiment";
+	oui = ft_split(s1, "a");
+	printf("J mbonfrom gequiroulevr iment %s \n", s11);
+	i = -1;
+	while (oui[++i])
+		printf("%s ", oui[i]);
+	printf("%s\n", oui[i]);
+	i = -1;
+	while (oui[++i])
+		free(oui[i]);
+	free(oui[i]);
+	free(oui);
+	s1 = "Jambonfromagequiroulevraiment";
+	oui = ft_split(s1, "Jambon");
+	printf("fr gequir ulevr i e t %s \n", s11);
+	i = -1;
+	while (oui[++i])
+		printf("%s ", oui[i]);
+	printf("%s\n", oui[i]);
+	i = -1;
+	while (oui[++i])
+		free(oui[i]);
+	free(oui[i]);
+	free(oui);
+	s1 = NULL;
+	oui = ft_split(s1, " ");
+	printf("%s \n", s11);
+	i = -1;
+	while (oui[++i])
+		printf("%s ", oui[i]);
+	printf("%s\n", oui[i]);
+	i = -1;
+	while (oui[++i])
+		free(oui[i]);
+	free(oui[i]);
+	free(oui);
+	s1 = NULL;
+	oui = ft_split(s1, NULL);
+	printf("%s \n", s11);
+	i = -1;
+	while (oui[++i])
+		printf("%s ", oui[i]);
+	printf("%s\n", oui[i]);
+	i = -1;
+	while (oui[++i])
+		free(oui[i]);
+	free(oui[i]);
+	free(oui);
+	s1 = "Jambonfromagequiroulevraiment";
+	oui = ft_split(s1, NULL);
+	printf("Jambonfromagequiroulevraiment %s \n", s11);
+	i = -1;
+	while (oui[++i])
+		printf("%s ", oui[i]);
+	printf("%s\n", oui[i]);
+	i = -1;
+	while (oui[++i])
+		free(oui[i]);
+	free(oui[i]);
+	free(oui);
 }

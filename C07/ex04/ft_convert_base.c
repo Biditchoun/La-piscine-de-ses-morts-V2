@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 15:11:28 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/07/23 19:20:16 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/07/24 15:02:48 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	get_rt_length(int nb, int d)
 	int	rt;
 
 	rt = 0;
-	if (nb < 0)
+	if (nb <= 0)
 		rt++;
 	while (nb && ++rt)
 		nb /= d;
@@ -40,7 +40,7 @@ int	get_rt_length(int nb, int d)
 int	write_nb_base(char *rt, int nb, char *base, int d)
 {
 	unsigned int	n;
-	int		i;
+	int				i;
 
 	if (nb < 0)
 		n = -nb;

@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 21:43:18 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/07/22 14:45:13 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/07/23 20:34:56 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@ int	*ft_range(int min, int max)
 	if (!rt)
 		return (NULL);
 	i = -1;
-	while (++min < max)
-		rt[++i] = min;
-	rt[++i] = min;
+	while (min < max)
+		rt[++i] = min++;
 	return (rt);
 }
