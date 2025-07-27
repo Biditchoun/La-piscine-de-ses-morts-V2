@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/27 15:43:47 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/07/27 22:39:55 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/07/27 23:13:04 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,16 +86,24 @@ int	print_next_word(t_param *dict, char *nb, char *nbc)
 	return (i);
 }
 
-int	check_filled_with_0(char *nb)
+int	check_filled_with_0_or_1(t_param *dict, char *nb)
 {
 	int	i;
 
 	i = 0;
 	while (nb[i] == '0')
 		i++;
-	if (nb[i])
-		return (0);
-	return (1);
+	if (!nb[i])
+	{
+		print_word(dict, "0", 0);
+		return (1);
+	}
+	if (!cmp(&nb[i], "1"))
+	{
+		print_word(dict, "1", 0);
+		return (1);
+	}
+	return (0);
 }
 
 int	print_number(t_param *dict, char *nb)
@@ -104,8 +112,8 @@ int	print_number(t_param *dict, char *nb)
 	int		i;
 	int		j;
 
-	if (check_filled_with_0(nb))
-		return (print_word(dict, "0", 0));
+	if (check_filled_with_0_or_1(dict, nb))
+		return (1);
 	i = ft_strlen(nb);
 	nbc = malloc(sizeof (char) * (i + 3 - i % 3 + 1));
 	if (!nbc)
