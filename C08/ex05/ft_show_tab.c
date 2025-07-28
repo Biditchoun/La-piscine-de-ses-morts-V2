@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/25 12:35:17 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/07/25 20:08:28 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/07/28 22:24:03 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ void	ft_show_tab(struct s_stock_str *par)
 {
 	int	i;
 
+	if (!par)
+		return ;
 	i = -1;
 	while (par[++i].str)
 	{
