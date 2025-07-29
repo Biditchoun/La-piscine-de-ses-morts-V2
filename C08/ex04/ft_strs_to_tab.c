@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strs_to_tab.c                                   :+:      :+:    :+:   */
+/*   old_ft_strs_to_tab.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 21:53:26 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/07/28 22:20:57 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/07/29 15:15:48 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 	t_stock_str	*rt;
 	int			i;
 
-	if (!av || ac < 1)
+	if (!av || ac < 0)
 		return (NULL);
 	rt = malloc(sizeof (t_stock_str) * (ac + 1));
 	if (!rt)

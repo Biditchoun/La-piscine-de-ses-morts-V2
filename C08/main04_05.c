@@ -6,7 +6,7 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/25 12:45:24 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/07/28 22:23:41 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/07/29 13:27:11 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void			ft_show_tab(struct s_stock_str *par);
 int main()
 {
 	t_stock_str	*oui;
-	char	*strs[] = {"", "", "", NULL};
+	char	*strs[] = {"oui", "", "", NULL};
 	int	size = 2;
 
 	oui = ft_strs_to_tab(size, strs);
