@@ -43,8 +43,6 @@ int	check_map(char *str, int h, int l)
 	int	j;
 	int	lines;
 
-	if (!is_in_string(&str[4], str[1]))
-		return (1);
 	i = 4;
 	lines = 0;
 	while (str[i])
@@ -81,6 +79,8 @@ int	check_input(char *str)
 	l = i;
 	while (str[l] && str[l] != '\n')
 		l++;
+	if (l == i)
+		return (1);
 	l -= i;
 	i = 0;
 	while (str[i] >= '0' && str[i] <= '9')

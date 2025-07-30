@@ -30,7 +30,7 @@ int	handle_this_map(int ac, char **av, int i)
 
 	str = file_into_str(ac, av, i);
 	if (!str)
-		return (handle_eol(2, "map error\n", NULL, ac - i));
+		return (handle_eol(1, "map error\n", NULL, ac - i));
 	if (check_input(str))
 		return (handle_eol(1, "map error\n", str, ac - i));
 	map = str_into_map(str);
