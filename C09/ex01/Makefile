@@ -14,7 +14,7 @@ $(NAME): $(OBJECTS)
 	ar rcs $(NAME) $(OBJECTS)
 
 $(OBJECTS): %.o:%.c includes/ft.h
-	$(COMPILER) $(FLAGS) -c $< -o $@
+	$(COMPILER) $(FLAGS) -c $< -o $@ -I includes
 
 clean: 
 	rm -f $(OBJECTS)
