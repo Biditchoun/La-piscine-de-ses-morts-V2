@@ -6,11 +6,11 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/30 18:28:43 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/07/30 18:38:17 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/07/31 15:18:59 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_count_if(char **tab, int length, int(*f)(char*))
+int	ft_count_if(char **tab, int length, int (*f)(char*))
 {
 	int	rt;
 	int	i;

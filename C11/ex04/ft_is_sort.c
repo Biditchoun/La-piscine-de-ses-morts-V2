@@ -6,11 +6,11 @@
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/30 18:41:01 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/07/31 12:35:46 by sawijnbe         ###   ########.fr       */
+/*   Updated: 2025/07/31 15:19:08 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_is_sort(int *tab, int length, int(*f)(int, int))
+int	ft_is_sort(int *tab, int length, int (*f)(int, int))
 {
 	int	check;
 	int	i;

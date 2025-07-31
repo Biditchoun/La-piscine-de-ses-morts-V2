@@ -1,22 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_foreach.c                                       :+:      :+:    :+:   */
+/*   operations.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sawijnbe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/29 22:28:21 by sawijnbe          #+#    #+#             */
-/*   Updated: 2025/07/31 15:18:36 by sawijnbe         ###   ########.fr       */
+/*   Created: 2025/07/31 12:48:44 by sawijnbe          #+#    #+#             */
+/*   Updated: 2025/07/31 15:20:02 by sawijnbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_foreach(int *tab, int length, void (*f)(int))
+int	addition(int a, int b)
 {
-	int	i;
+	return (a + b);
+}
 
-	if (!tab || !f)
-		return ;
-	i = -1;
-	while (++i < length)
-		f(tab[i]);
+int	substraction(int a, int b)
+{
+	return (a - b);
+}
+
+int	division(int a, int b)
+{
+	return (a / b);
+}
+
+int	multiplication(int a, int b)
+{
+	return (a * b);
+}
+
+int	modulo(int a, int b)
+{
+	return (a % b);
 }
